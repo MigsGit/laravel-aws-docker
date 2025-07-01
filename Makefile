@@ -40,7 +40,8 @@ fresh-prod: ## Destroy & recreate all using prod containers.
 	make destroy-prod
 	make build-prod
 	make start-prod
-
+exec: ## SSH into PHP container
+	docker exec -it ${CONTAINER_PHP} bash
 ssh: ## SSH into PHP container
 	docker exec -it ${CONTAINER_PHP} sh
 
