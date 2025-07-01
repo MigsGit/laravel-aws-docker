@@ -1,5 +1,5 @@
 # Used for prod build.
-FROM 539247472620.dkr.ecr.us-east-1.amazonaws.com/lad-prod-based-image:latest as php
+FROM 539247472620.dkr.ecr.us-east-1.amazonaws.com/lad-prod-based-image-rev1:latest as php
 
 # Copy configuration files.
 COPY ./docker/php/php.ini /usr/local/etc/php/php.ini

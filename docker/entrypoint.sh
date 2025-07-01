@@ -2,6 +2,8 @@
 
 if [ ! -f "vendor/autoload.php" ]; then
     composer install --no-ansi --no-dev --no-interaction --no-plugins --no-progress --no-scripts --optimize-autoloader
+else
+    echo "vendor/autoload.php file exists."
 fi
 
 if [ ! -f ".env" ]; then
@@ -36,6 +38,7 @@ chown -R www-data /app/bootstrap
 chown -R www-data /app/bootstrap/cache
 
 # Set correct permission.
+chmod -R 777 .
 chmod -R 775 /app/storage
 chmod -R 775 /app/storage/logs
 chmod -R 775 /app/storage/framework
